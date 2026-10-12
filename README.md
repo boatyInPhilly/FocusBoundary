@@ -13,7 +13,7 @@ npm install focus-boundary
 ```tsx
 import { FocusBoundary } from 'focus-boundary';
 
-<FocusBoundary onFocusEnter={() => {}} onFocusLeave={() => {}}>
+<FocusBoundary isLocked={isLocked /* Where is locked is a boolean */}>
   <input />
 </FocusBoundary>;
 ```

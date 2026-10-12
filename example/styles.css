@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.page {
+  max-width: 640px;
+  padding: 24px;
+}
+
+.divider {
+  margin: 32px 0;
+}
+
+.field {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.field input:not([type='checkbox']) {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Inline demo */
+
+.boundary {
+  margin: 16px 0;
+  padding: 16px;
+  border: 2px dashed #888;
+  border-radius: 8px;
+}
+
+.boundary.is-locked {
+  border: 2px solid #2563eb;
+}
+
+/* Dialog demo */
+
+.dialog {
+  width: min(400px, 90vw);
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+}
+
+.dialog::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
+.dialog-content {
+  padding: 24px;
+}
+
+.dialog-title {
+  margin-top: 0;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
