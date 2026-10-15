@@ -4,6 +4,27 @@
   "description": "A React component for managing focus within a boundary.",
   "license": "MIT",
   "type": "module",
+  "author": "James Boatwright",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boatyInPhilly/FocusBoundary.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "focus",
+    "focus-trap",
+    "focus-lock",
+    "focus-management",
+    "accessibility",
+    "a11y",
+    "keyboard-navigation",
+    "modal",
+    "dialog",
+    "typescript"
+  ],
+  "homepage": "https://github.com/boatyInPhilly/FocusBoundary",
+  "bugs": "https://github.com/boatyInPhilly/FocusBoundary/issues",
   "sideEffects": false,
   "files": [
     "dist"
@@ -14,7 +35,7 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "default": "./dist/index.js"
     },
     "./package.json": "./package.json"
   },
@@ -27,8 +48,7 @@
     "prepublishOnly": "npm run typecheck && npm run test:run && npm run build"
   },
   "peerDependencies": {
-    "react": ">=18",
-    "react-dom": ">=18"
+    "react": ">=18"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
