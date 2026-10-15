@@ -128,6 +128,25 @@ npm run dev
 - `example/`: demo app, imports straight from `src/`. Not published.
 - `test/`: Vitest and Testing Library tests. Not published.
 
+### Releasing
+
+Releases are published to npm by GitHub Actions when a `v*` tag is pushed. Bump the version in a pull request, then tag `main` after it merges:
+
+```sh
+git switch main && git pull
+git switch -c release-x.y.z
+npm version patch --no-git-tag-version   # or minor / major
+git commit -am "Release x.y.z"
+git push -u origin release-x.y.z
+gh pr create --fill
+# after CI passes and the PR is merged:
+git switch main && git pull
+git tag vx.y.z
+git push origin vx.y.z
+```
+
+The release workflow checks that the tag matches the version in `package.json` before publishing.
+
 ## License
 
 MIT © James Boatwright
